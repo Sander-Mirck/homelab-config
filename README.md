@@ -6,10 +6,10 @@ These are all my docker-compose files for my homelab. I have hidden most configu
 
 ### Remote Access
 
-I access my homelab externally with **Tailscale**. It's very easy, and you don't have to expose any ports on your router. I have previously always used Nextcloud tunnels, but it became an issue with Jellyfin and transcoding. 
+I access my homelab externally with Tailscale. It's very easy, and you don't have to expose any ports on your router. I have previously always used Nextcloud tunnels, but it became an issue with Jellyfin and transcoding. 
 
 ---
 
 ### Hardware
 
-I run everything on my **Raspberry Pi 5**. Furthermore, I'm currently looking to expand.
+I run everything on my Raspberry Pi 5. Furthermore, I'm currently looking to expand.
