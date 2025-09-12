@@ -1,0 +1,12 @@
+services:
+  dashy:
+    image: lissy93/dashy:latest
+    container_name: dashy
+    ports:
+      - "4000:4000"  # External port
+    environment:
+      - NODE_ENV=production
+      - PORT=4000    # Internal port Dashy will bind to
+    volumes:
+      - ./conf.yml:/app/public/conf.yml:ro
+    restart: always

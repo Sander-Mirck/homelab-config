@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: "1000:1000"
+    volumes:
+      - ./jellyfin_data/config:/config
+      - ./jellyfin_data/media:/media
+      - /mnt/ssd/media:/media-ssd
+    ports:
+      - "8096:8096"
+    environment:
+      - JELLYFIN_PublishedServerUrl=localhost:8096
+    restart: unless-stopped
+    networks:
+      - media-network
+
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    user: "1000:1000"
+    volumes:
+      - ./jellyfin_data:/srv
+      - /mnt/ssd/media:/srv/media-ssd
+      - ./filebrowser/database:/database
+    ports:
+      - "8080:80"
+    command: 
+      - "--database"
+      - "/database/filebrowser.db"
+      - "--root"
+      - "/srv"
+    restart: unless-stopped
+    networks:
+      - media-network
+
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    container_name: jellyseerr
+    user: "1000:1000"
+    network_mode: host
+    volumes:
+      - ./jellyseerr/config:/app/config
+    environment:
+      - LOG_LEVEL=info
+      - TZ=Europe/Amsterdam
+    restart: unless-stopped
+
+networks:
+  media-network:
+    driver: bridge

@@ -1,0 +1,110 @@
+services:
+  # 📺 TV Shows - Sonarr
+  sonarr:
+    image: linuxserver/sonarr:arm64v8-latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /home/sander/docker/arr/sonarr/config:/config
+      - /home/sander/docker/jellyfin/jellyfin_data/media/Shows:/tv
+      - /mnt/ssd/media/Shows:/tv-ssd
+      - /home/sander/docker/arr/downloads:/downloads
+    ports:
+      - "11543:8989"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+  # 🎬 Movies - Radarr
+  radarr:
+    image: linuxserver/radarr:arm64v8-latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /home/sander/docker/arr/radarr/config:/config
+      - /home/sander/docker/jellyfin/jellyfin_data/media/Movies:/movies
+      - /mnt/ssd/media/Movies:/movies-ssd
+      - /home/sander/docker/arr/downloads:/downloads
+    ports:
+      - "11544:7878"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+  # 🎵 Music - Lidarr
+  lidarr:
+    image: linuxserver/lidarr:arm64v8-latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /home/sander/docker/arr/lidarr/config:/config
+      - /home/sander/docker/jellyfin/jellyfin_data/media/Music:/music
+      - /mnt/ssd/media/Music:/music-ssd
+      - /home/sander/docker/arr/downloads:/downloads
+    ports:
+      - "11545:8686"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+  # 🔍 Indexer Manager - Prowlarr
+  prowlarr:
+    image: linuxserver/prowlarr:arm64v8-latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - /home/sander/docker/arr/prowlarr/config:/config
+    ports:
+      - "11546:9696"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+  # 🧲 Torrent Client - qBittorrent
+  qbittorrent:
+    build:
+      context: . # Build from the current directory
+      dockerfile: Dockerfile
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+      - WEBUI_PORT=8080
+    volumes:
+      - /home/sander/docker/arr/qbittorrent/config:/config
+      - /home/sander/docker/arr/downloads:/downloads
+      - /home/sander/docker/arr/scripts:/scripts
+    ports:
+      - "11547:8080"
+      - "6881:6881"
+      - "6881:6881/udp"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+  # 🛡️ Anti-Captcha Proxy - FlareSolverr
+  flaresolverr:
+    image: flaresolverr/flaresolverr
+    container_name: flaresolverr
+    ports:
+      - "8191:8191"
+    restart: unless-stopped
+    networks:
+      - arr-net
+
+networks:
+  arr-net:
+    driver: bridge

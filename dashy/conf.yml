@@ -1,0 +1,72 @@
+pageInfo:
+  title: Raspberry Pi Dashboard
+  description: Monitoring and managing my self-hosted services
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Dashy Docs
+      path: https://dashy.to/docs
+
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: medium
+  language: en
+  statusCheck: true
+
+sections:
+  - name: Media Stack
+    icon: mdi:movie-open
+    items:
+      - title: Jellyfin
+        description: Media server
+        icon: hl-jellyfin
+        url: http://raspberrypi:8096
+        statusCheck: true
+      - title: Transmission
+        description: Torrent client
+        icon: hl-transmission
+        url: http://raspberrypi:9091
+        statusCheck: true
+      - title: Filebrowser
+        description: Web-based file manager
+        icon: mdi:file
+        url: http://raspberrypi:8080
+        statusCheck: true
+
+  - name: ARR Stack
+    icon: mdi:filmstrip
+    items:
+      - title: Sonarr
+        description: TV series automation
+        icon: hl-sonarr
+        url: http://raspberrypi:8989
+        statusCheck: true
+      - title: Radarr
+        description: Movie automation
+        icon: hl-radarr
+        url: http://raspberrypi:7878
+        statusCheck: true
+      - title: FlareSolverr
+        description: Proxy for bypassing Cloudflare
+        icon: mdi:cloud-lock
+        url: http://raspberrypi:8191
+        statusCheck: true
+
+  - name: Sync & Storage
+    icon: mdi:sync
+    items:
+      - title: Syncthing
+        description: Continuous file synchronization
+        icon: hl-syncthing
+        url: http://raspberrypi:8384
+        statusCheck: true
+
+  - name: Management
+    icon: mdi:tools
+    items:
+      - title: Portainer
+        description: Docker container management
+        icon: hl-portainer
+        url: http://raspberrypi:9000
+        statusCheck: true

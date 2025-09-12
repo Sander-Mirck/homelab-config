@@ -1,0 +1,20 @@
+*.env
+**/.env
+*.json
+
+# Data mappen van applicaties
+docmost
+home_assistant/config
+jellyfin/filebrowser/database/filebrowser.db
+jellyfin/jellyseerr/config
+jellyfin/jellyfin_data
+pi-hole/etc-pihole
+syncthing/syncthing/config
+
+# Data mappen voor arr-stack
+arr/downloads
+arr/lidarr/config
+arr/prowlarr/config
+arr/qbittorrent/config/qBittorrent
+arr/radarr/config
+arr/sonarr/config
