@@ -12,4 +12,4 @@ I access my homelab externally with Tailscale. It's very easy, and you don't hav
 
 ### Hardware
 
-I run everything on my Raspberry Pi 5. Furthermore, I'm currently looking to expand.
+I run everything on my Raspberry Pi 5. I'm currently looking to expand.
