@@ -19,39 +19,28 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_0
-        title: Cockpit
+      - title: Cockpit
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/cockpit.png
         url: http://raspberrypi:9090
         id: 0_855_cockpit
-      - &ref_1
-        title: Tailscale Admin
+      - title: Tailscale Admin
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tailscale.png
         url: https://login.tailscale.com/admin/machines
         id: 1_855_tailscaleadmin
-      - &ref_2
-        title: Portainer
+      - title: Portainer
         description: ''
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/portainer.png
         url: http://raspberrypi:9000
         id: 2_855_portainer
-      - &ref_3
-        title: Pi-Hole
+      - title: Pi-Hole
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pi-hole.png
         url: http://raspberrypi
         id: 3_855_pihole
-      - &ref_4
-        title: Syncthing
+      - title: Syncthing
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/syncthing.png
         url: http://raspberrypi:8384
         id: 4_855_syncthing
     icon: '   https://cdn-icons-png.flaticon.com/512/16913/16913090.png '
-    filteredItems:
-      - *ref_0
-      - *ref_1
-      - *ref_2
-      - *ref_3
-      - *ref_4
   - name: Media Stack
     icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png
     displayData:
@@ -61,20 +50,15 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_5
-        title: Jellyfin
+      - title: Jellyfin
         description: DON'T use this for streaming on desktop, use the app instead.
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png
         url: http://raspberrypi:8096
         id: 0_1014_jellyfin
-      - &ref_6
-        title: File Browser
+      - title: File Browser
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/file-browser.png
         url: http://raspberrypi:8080
         id: 1_1014_filebrowser
-    filteredItems:
-      - *ref_5
-      - *ref_6
   - name: ARR Stack
     icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/prowlarr.png
     displayData:
@@ -84,43 +68,30 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_7
-        title: Sonarr
+      - title: Sonarr
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/sonarr.png
         url: http://raspberrypi:11543
         id: 0_763_sonarr
-      - &ref_8
-        title: Radarr
+      - title: Radarr
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/radarr.png
         url: http://raspberrypi:11544
         id: 1_763_radarr
-      - &ref_9
-        title: Prowlarr
+      - title: Prowlarr
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/prowlarr.png
         url: http://raspberrypi:11546
         id: 2_763_prowlarr
-      - &ref_10
-        title: qBittorrent
+      - title: qBittorrent
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/qbittorrent.png
         url: http://raspberrypi:11547
         id: 3_763_qbittorrent
-      - &ref_11
-        title: Jellyseerr
+      - title: Jellyseerr
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png
         url: http://raspberrypi:5055
         id: 4_763_jellyseerr
-      - &ref_12
-        title: Lidarr
+      - title: Lidarr
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lidarr.png
         url: http://raspberrypi:11545
         id: 5_763_lidarr
-    filteredItems:
-      - *ref_7
-      - *ref_8
-      - *ref_9
-      - *ref_10
-      - *ref_11
-      - *ref_12
   - name: Home
     icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/home-assistant.png
     displayData:
@@ -130,14 +101,11 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_13
-        title: Home Assistant
+      - title: Home Assistant
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/home-assistant.png
         url: http://raspberrypi:8123
         target: newtab
         id: 0_393_homeassistant
-    filteredItems:
-      - *ref_13
   - name: Documentation
     icon: https://cdn-icons-png.flaticon.com/512/888/888034.png
     displayData:
@@ -147,13 +115,10 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_14
-        title: Docmost
+      - title: Docmost
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/docmost.png
         url: http://raspberrypi:3000
         id: 0_1370_docmost
-    filteredItems:
-      - *ref_14
   - name: Coding
     icon: >-
       https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F128%2F10364%2F10364661.png&f=1&nofb=1&ipt=26f991df9257d2e281e4c18d6af51cd8013f33aa157b6e27162ca2859ecda76c
@@ -164,10 +129,7 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_15
-        title: OneDev
-        icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/onedev.png
-        url: http://raspberrypi:6610
-        id: 0_596_onedev
-    filteredItems:
-      - *ref_15
+      - title: Gitea
+        icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/gitea.png
+        url: http://raspberrypi:3000
+        id: 0_596_gitea
