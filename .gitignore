@@ -3,7 +3,6 @@
 *.json
 
 # Data mappen van applicaties
-docmost
 home_assistant/config
 jellyfin/filebrowser/database/filebrowser.db
 jellyfin/jellyseerr/config
