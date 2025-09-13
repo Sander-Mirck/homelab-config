@@ -122,7 +122,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -136,8 +136,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "followCursor": false,
-                "showSearch": false,
+                "followCursor": true,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
@@ -173,10 +173,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9e9993ecd7058407",
+  "active": "039e4ee62510149e",
   "lastOpenFiles": [
-    "Learning DevOps/Canvas.canvas",
     "Test.md",
+    "Learning DevOps/Canvas.canvas",
     "devops.pdf",
     "2025-09-13.md",
     "Learning DevOps/Git.md",
