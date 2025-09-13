@@ -4,21 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d3b78104f961b29d",
+        "id": "0d3c9045089470f8",
         "type": "tabs",
         "children": [
           {
-            "id": "45830788b5eb1977",
+            "id": "08b1831a5315da9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Learning DevOps/Ansible.md",
-                "mode": "preview",
-                "source": false
+                "file": "Learning DevOps/Canvas.canvas",
+                "viewState": {
+                  "x": 372.5,
+                  "y": 430,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "Ansible"
+              "icon": "lucide-layout-dashboard",
+              "title": "Canvas"
             }
           }
         ]
@@ -167,9 +170,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "45830788b5eb1977",
+  "active": "08b1831a5315da9f",
   "lastOpenFiles": [
+    "Learning DevOps/Canvas.canvas",
+    "devops.pdf",
+    "2025-09-13.md",
     "Learning DevOps/Git.md",
+    "Untitled.base",
     "Learning DevOps/Ansible.md",
     "Learning DevOps",
     "Welcome.md"
