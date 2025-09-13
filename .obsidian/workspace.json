@@ -4,24 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0d3c9045089470f8",
+        "id": "82aaf6ae0a8fa04d",
         "type": "tabs",
         "children": [
           {
-            "id": "08b1831a5315da9f",
+            "id": "9e9993ecd7058407",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Learning DevOps/Canvas.canvas",
-                "viewState": {
-                  "x": 372.5,
-                  "y": 430,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Canvas"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -150,29 +143,40 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "039e4ee62510149e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 360.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "github-sync:Sync with Remote": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "08b1831a5315da9f",
+  "active": "9e9993ecd7058407",
   "lastOpenFiles": [
     "Learning DevOps/Canvas.canvas",
+    "Test.md",
     "devops.pdf",
     "2025-09-13.md",
     "Learning DevOps/Git.md",
