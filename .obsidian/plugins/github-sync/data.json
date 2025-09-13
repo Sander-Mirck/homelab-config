@@ -1,6 +1,6 @@
 {
   "remoteURL": "https://github.com/Sander-Mirck/learning-devops.git",
-  "gitLocation": "git",
+  "gitLocation": "",
   "syncinterval": 0,
   "isSyncOnLoad": true,
   "checkStatusOnLoad": true
