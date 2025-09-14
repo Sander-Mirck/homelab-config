@@ -36,10 +36,6 @@ sections:
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pi-hole.png
         url: http://raspberrypi
         id: 3_855_pihole
-      - title: Syncthing
-        icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/syncthing.png
-        url: http://raspberrypi:8384
-        id: 4_855_syncthing
     icon: '   https://cdn-icons-png.flaticon.com/512/16913/16913090.png '
   - name: Media Stack
     icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png
