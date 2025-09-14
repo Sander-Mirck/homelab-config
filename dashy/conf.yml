@@ -106,19 +106,6 @@ sections:
         url: http://raspberrypi:8123
         target: newtab
         id: 0_393_homeassistant
-  - name: Documentation
-    icon: https://cdn-icons-png.flaticon.com/512/888/888034.png
-    displayData:
-      sortBy: default
-      rows: 1
-      cols: 1
-      collapsed: false
-      hideForGuests: false
-    items:
-      - title: Docmost
-        icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/docmost.png
-        url: http://raspberrypi:3000
-        id: 0_1370_docmost
   - name: Coding
     icon: >-
       https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F128%2F10364%2F10364661.png&f=1&nofb=1&ipt=26f991df9257d2e281e4c18d6af51cd8013f33aa157b6e27162ca2859ecda76c
