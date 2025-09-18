@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  dumbpad:
+    image: dumbwareio/dumbpad:latest
+    container_name: dumbpad
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      # The title shown in the web interface
+      - SITE_TITLE=${SITE_TITLE:-DumbPad}
+      # Optional PIN protection (4-10 digits, leave empty to disable)
+      - DUMBPAD_PIN=${DUMBPAD_PIN:-}
+      # The base URL for the application
+      - BASE_URL=${BASE_URL:-http://localhost:3000}
+      # (OPTIONAL) Restrict CORS to specific origins
+      # Usage: Comma-separated list of urls: http://localhost:3000,http://192.168.1.100:3000
+      # Comment out to allow all origins (*)
+      # - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:3000}
+      # Customize pin lockout time (if empty, defaults to 15 in minutes)
+      - LOCKOUT_TIME=${LOCKOUT_TIME:-15}
+      # Customize pin max attempts (if empty, defaults to 5)
+      - MAX_ATTEMPTS=${MAX_ATTEMPTS:-5}
+      # Customize maximum age of cookies for pin verification (default 24) in hours
+      - COOKIE_MAX_AGE=${COOKIE_MAX_AGE:-24}
+      # Customize age of cookie for last opened notepad (default 365 | max 400) in days
+      - PAGE_HISTORY_COOKIE_AGE=${PAGE_HISTORY_COOKIE_AGE:-365}
+    # Optional: Add health check for better monitoring on Raspberry Pi
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Optional: Add resource limits suitable for Raspberry Pi 5
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M
+
+volumes:
+  dumbpad_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/data

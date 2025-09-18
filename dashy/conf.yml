@@ -116,3 +116,7 @@ sections:
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/gitea.png
         url: http://raspberrypi:3000
         id: 0_596_gitea
+      - title: DumbPad
+        icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dumbpad.png
+        url: http://raspberrypi:3000
+        id: 1_596_dumbpad
