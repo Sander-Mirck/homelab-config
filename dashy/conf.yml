@@ -34,8 +34,14 @@ sections:
         id: 2_855_portainer
       - title: Pi-Hole
         icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pi-hole.png
-        url: http://raspberrypi
+        url: http://raspberrypi/admin
         id: 3_855_pihole
+      - title: Homelab Configurations
+        icon: >-
+          https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fgithub%2Fgithub_PNG40.png&f=1&nofb=1&ipt=8b259b4db60bb25f5cc3dbeb68256b8d0666ac5cd67c8b1247758a89440374f7
+        url: https://github.com/Sander-Mirck/homelab-config
+        target: newtab
+        id: 4_855_homelabconfigurations
     icon: '   https://cdn-icons-png.flaticon.com/512/16913/16913090.png '
   - name: Media Stack
     icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png
