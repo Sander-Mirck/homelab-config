@@ -7,7 +7,6 @@ home_assistant/config
 jellyfin/filebrowser/database/filebrowser.db
 jellyfin/jellyseerr/config
 jellyfin/jellyfin_data
-pi-hole/etc-pihole
 syncthing/syncthing/config
 
 # Data mappen voor arr-stack
