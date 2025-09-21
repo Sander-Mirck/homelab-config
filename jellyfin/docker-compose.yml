@@ -24,6 +24,7 @@ services:
     volumes:
       - ./jellyfin_data:/srv
       - /mnt/ssd/media:/srv/media-ssd
+      - /home/sander/docker/arr/downloads:/srv/downloads
       - ./filebrowser/database:/database
     ports:
       - "8080:80"
